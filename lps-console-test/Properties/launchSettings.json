@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "lps-console-test": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
