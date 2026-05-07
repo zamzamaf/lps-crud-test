@@ -1,6 +1,4 @@
-﻿using System.Net.Security;
-
-class Program
+﻿class Program
 {
     static void Main()
     {

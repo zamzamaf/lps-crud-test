@@ -1,6 +1,5 @@
 ﻿using lps_web_test.Application.Interfaces;
 using lps_web_test.Domain.Entities;
-using lps_web_test.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;

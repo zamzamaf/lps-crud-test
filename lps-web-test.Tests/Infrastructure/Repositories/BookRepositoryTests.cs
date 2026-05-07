@@ -1,21 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection;
-using System.Threading;
-using System.Threading.Tasks;
-
-using lps_web_test.Domain;
-using lps_web_test.Domain.Entities;
+﻿using lps_web_test.Domain.Entities;
 using lps_web_test.Domain.Interface;
-using lps_web_test.Infrastructure;
 using lps_web_test.Infrastructure.Data;
-using lps_web_test.Infrastructure.Repositories;
-using Microsoft;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Moq;
+using System.Linq.Expressions;
+using System.Reflection;
 using Xunit;
 
 namespace lps_web_test.Infrastructure.Repositories.UnitTests

@@ -1,7 +1,7 @@
-using Microsoft.EntityFrameworkCore;
 using lps_web_test.Domain.Entities;
 using lps_web_test.Infrastructure.Data;
 using lps_web_test.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
 using Xunit;
 
 namespace lps_web_test.Tests;
