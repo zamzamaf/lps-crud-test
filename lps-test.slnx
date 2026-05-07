@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="lps-console-test/lps-console-test.csproj" />
   <Project Path="lps-web-test/lps-web-test.csproj" Id="4b1457e0-74ab-4de4-998d-b69064ab1a10" />
-  <Project Path="lps-web-test.Tests/lps-web-test.Tests.csproj" Id="7e7b7f88-5c5b-4b1f-a2d4-004e1338b5c1" />
-</Solution>
+  <Project Path="lps-web-test.Tests/lps-web-test.Tests.csproj" Id="7e7b7f88-5c5b-4b1f-a2d4-004e1338b5c1" />  <Project Path="rabbitmq-demo\RabbitMqDemo.Shared\RabbitMqDemo.Shared.csproj" />
+  <Project Path="rabbitmq-demo\Producer\Producer.csproj" />
+  <Project Path="rabbitmq-demo\Consumer\Consumer.csproj" /></Solution>
