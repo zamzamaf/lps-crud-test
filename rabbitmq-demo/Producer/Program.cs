@@ -9,6 +9,9 @@ var topology = new RabbitMqTopology(settings);
 
 await using var connection = await topology.CreateConnectionAsync();
 await using var channel = await connection.CreateChannelAsync();
+
+// Reset existing topology to handle configuration changes
+await topology.ResetTopologyAsync(channel);
 await topology.EnsureTopologyAsync(channel);
 
 var messageCount = args.Length > 0 && int.TryParse(args[0], out var parsed) && parsed > 0

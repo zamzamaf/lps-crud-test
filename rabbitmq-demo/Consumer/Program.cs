@@ -10,6 +10,9 @@ var topology = new RabbitMqTopology(settings);
 
 await using var connection = await topology.CreateConnectionAsync();
 await using var channel = await connection.CreateChannelAsync();
+
+// Reset existing topology to handle configuration changes
+await topology.ResetTopologyAsync(channel);
 await topology.EnsureTopologyAsync(channel);
 
 var consumeDlq = args.Contains(dlqArgument, StringComparer.OrdinalIgnoreCase);

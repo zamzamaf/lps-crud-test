@@ -28,6 +28,26 @@ public sealed class RabbitMqTopology
         return await CreateFactory().CreateConnectionAsync();
     }
 
+    public async Task ResetTopologyAsync(IChannel channel)
+    {
+        try
+        {
+            // Delete queues first (bindings will be removed automatically)
+            await channel.QueueDeleteAsync(_settings.MainQueueName);
+            await channel.QueueDeleteAsync(_settings.PendingQueueName);
+            await channel.QueueDeleteAsync(_settings.DeadLetterQueueName);
+
+            // Delete exchanges
+            await channel.ExchangeDeleteAsync(_settings.MainExchangeName);
+            await channel.ExchangeDeleteAsync(_settings.PendingExchangeName);
+            await channel.ExchangeDeleteAsync(_settings.DeadLetterExchangeName);
+        }
+        catch (Exception)
+        {
+            // Ignore errors if queues/exchanges don't exist
+        }
+    }
+
     public async Task EnsureTopologyAsync(IChannel channel)
     {
         // Deklarasi Dead Letter Queue (final destination setelah retry gagal 10x)
