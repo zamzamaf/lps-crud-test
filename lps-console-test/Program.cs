@@ -2,12 +2,41 @@
 {
     static void Main()
     {
-        Program main = new Program();
-        //main.HelloWorld();
-        main.ForeachOneToN();
-    }
+        while (true)
+        {
+            Console.WriteLine("Pilih metode:");
+            Console.WriteLine("1. Hello World");
+            Console.WriteLine("2. Foreach One To N");
+            Console.WriteLine("3. Reverse Word Order");
+            Console.WriteLine("4. Reverse Words");
+            Console.WriteLine("5. Check Palindrome");
+            Console.WriteLine("0. Exit");
 
-    public void HelloWorld()
+            int choice = int.Parse(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 1:
+                    Test.HelloWorld();
+                    break;
+                case 2:
+                    Test.ForeachOneToN();
+                    break;
+                case 0:
+                    return;
+                default:
+                    Console.WriteLine("Pilihan tidak valid.");
+                    break;
+            }
+
+            Console.WriteLine();
+        }
+    }  
+}
+
+public class Test
+{
+    public static void HelloWorld()
     {
         string input = "hello world";
 
@@ -55,11 +84,11 @@
         // output
         for (int i = 0; i < uniqueCount; i++)
         {
-            System.Console.WriteLine(unique[i] + " - " + count[i]);
+            Console.WriteLine(unique[i] + " - " + count[i]);
         }
     }
 
-    public void ForeachOneToN()
+    public static void FizzBuzz()
     {
         Console.Write("Masukkan nilai N: ");
         int N = int.Parse(Console.ReadLine());

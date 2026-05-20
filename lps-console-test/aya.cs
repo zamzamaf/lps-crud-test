@@ -2,11 +2,11 @@ namespace Latihan1;
 
 class Program
 {
-    static void Main(string[] args)
-    {
-        Test.ReverseString("Hello World");
-        Test.chkPalindrome("madam");
-        Test.ReverseWordOrder("Hello World from C#");
+    // static void Main(string[] args)
+    // {
+        // Test.ReverseString("Hello World");
+        // Test.chkPalindrome("madam");
+        // Test.ReverseWordOrder("Hello World from C#");
         // Program program = new Program();
         // Console.WriteLine("Enter a string to check if it's a palindrome:");
         // string? input = Console.ReadLine();
@@ -48,7 +48,7 @@ class Program
         // Console.WriteLine("Enter a number to calculate its Fibonacci:");
         // int fibonacciInput = int.Parse(Console.ReadLine());
         // Console.WriteLine($"Fibonacci of {fibonacciInput} is: {program.Fibonacci(fibonacciInput)}");
-    }
+    // }
 
     bool IsPalindrome(string input)
     {
